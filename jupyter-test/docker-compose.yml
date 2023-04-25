@@ -1,0 +1,7 @@
+services:
+  jupyter-test:
+    build:
+      context: ..
+      dockerfile: jupyter-test/Dockerfile
+    ports:
+      - "8889:8888"

@@ -1,0 +1,17 @@
+services:
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: andrew
+      POSTGRES_PASSWORD: 123qwe
+      POSTGRES_DB: foo
+    ports:
+      - 5432:5432
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080

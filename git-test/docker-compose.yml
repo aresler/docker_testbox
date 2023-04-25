@@ -1,0 +1,10 @@
+services:
+  git-test:
+    image: jkarlos/git-server-docker
+    volumes:
+      # https://hub.docker.com/r/jkarlos/git-server-docker/
+      # Clone with `git clone ssh://git@git-server/git-server/repos/myrepo.git`
+      - $DOCKER_MNT/git-server/keys:/git-server/keys # Put public SSH key here
+      - $DOCKER_MNT/git-server/repos:/git-server/repos # Put repositories here
+    ports:
+      - "2223:22"
