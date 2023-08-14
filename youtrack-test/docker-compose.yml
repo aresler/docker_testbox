@@ -3,9 +3,9 @@ services:
     # https://hub.docker.com/r/jetbrains/youtrack/tags
     image: jetbrains/youtrack:2022.3.65371
     volumes:
-      - $DOCKER_MNT/youtrack/data:/opt/youtrack/data
-      - $DOCKER_MNT/youtrack/conf:/opt/youtrack/conf
-      - $DOCKER_MNT/youtrack/logs:/opt/youtrack/logs
-      - $DOCKER_MNT/youtrack/backups:/opt/youtrack/backups
+      - ./mount/data:/opt/youtrack/data
+      - ./mount/conf:/opt/youtrack/conf
+      - ./mount/logs:/opt/youtrack/logs
+      - ./mount/backups:/opt/youtrack/backups
     ports:
       - 8444:8080
