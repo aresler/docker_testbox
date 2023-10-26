@@ -10,7 +10,21 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 	echo $TZ > /etc/timezone
 
 RUN apt update && \
-	apt install -y sudo openssh-server python3 python3-distutils python3-pip python3-venv iputils-ping vim ranger net-tools netcat lsof curl git
+	apt install -y sudo openssh-server \
+	python3 \
+	python3-distutils \
+	python3-pip \
+	python3-venv \
+	iputils-ping \
+	vim \
+	ranger \
+	net-tools \
+	netcat \
+	lsof \
+	curl \
+	git
+
+RUN /usr/bin/python3 -m pip install pytest
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
