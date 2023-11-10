@@ -41,9 +41,11 @@ RUN chown -R $USER:$USER . && \
 USER andrew
 RUN curl $CONDA_INSTALLER_URL -o miniconda3.sh && \
     chmod +x miniconda3.sh && \
-    ./miniconda3.sh -b && \
-    miniconda3/bin/conda init -q && \
-    miniconda3/bin/conda config --set auto_activate_base false
+    ./miniconda3.sh -b
+
+## Commented out because shell init produces an error at this point
+# RUN miniconda3/bin/conda init -q && \
+#     miniconda3/bin/conda config --set auto_activate_base false
 
 RUN mkdir -p ./projects
 
