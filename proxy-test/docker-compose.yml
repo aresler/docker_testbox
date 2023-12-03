@@ -7,4 +7,3 @@ services:
     volumes:
       - ./squid.conf:/etc/squid/squid.conf
       - ./passwords:/etc/squid/passwords
-    restart: always
