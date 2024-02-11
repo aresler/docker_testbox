@@ -1,7 +1,7 @@
 services:
   youtrack:
     # https://hub.docker.com/r/jetbrains/youtrack/tags
-    image: jetbrains/youtrack:2022.3.65371
+    image: jetbrains/youtrack:2023.3.23390
     volumes:
       - ./mount/data:/opt/youtrack/data
       - ./mount/conf:/opt/youtrack/conf
