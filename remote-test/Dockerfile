@@ -4,7 +4,7 @@ ENV TZ=Europe/Amsterdam
 ENV USER=andrew
 ENV PASSWD=123qwe
 ENV HOME=/home/$USER
-ENV CONDA_INSTALLER_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ENV CONDA_INSTALLER_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 	echo $TZ > /etc/timezone
