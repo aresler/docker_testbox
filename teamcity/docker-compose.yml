@@ -1,0 +1,8 @@
+services:
+  teamcity:
+    image: jetbrains/teamcity-server
+    volumes:
+      - ${MOUNTPATH}/teamcity/datadir:/data/teamcity_server/datadir
+      - ${MOUNTPATH}/teamcity/logs:/opt/teamcity/logs
+    ports:
+      - 8080:8111

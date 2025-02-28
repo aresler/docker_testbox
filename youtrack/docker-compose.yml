@@ -1,0 +1,11 @@
+services:
+  youtrack:
+    # https://hub.docker.com/r/jetbrains/youtrack/tags
+    image: jetbrains/youtrack:2023.3.23390
+    volumes:
+      - ${MOUNTPATH}/youtrack:/opt/youtrack/data
+      - ${MOUNTPATH}/youtrack:/opt/youtrack/conf
+      - ${MOUNTPATH}/youtrack:/opt/youtrack/logs
+      - ${MOUNTPATH}/youtrack:/opt/youtrack/backups
+    ports:
+      - 8444:8080
