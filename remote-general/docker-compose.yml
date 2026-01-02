@@ -2,7 +2,7 @@ services:
   remote-test:
     build:
       context: ..
-      dockerfile: remote-test/Dockerfile
+      dockerfile: remote-general/Dockerfile
     ports:
       - 2222:22
       - 2300:2300

@@ -51,7 +51,7 @@ RUN miniconda3/bin/conda create -n foo python==3.10 -y
 RUN mkdir -p ./projects
 
 USER root
-COPY remote-test/entrypoint.sh /tmp
+COPY remote-general/entrypoint.sh /tmp
 RUN chmod +x /tmp/entrypoint.sh
 
 EXPOSE 22
